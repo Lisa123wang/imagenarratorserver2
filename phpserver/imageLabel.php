@@ -24,7 +24,8 @@ if (!empty($imageUrl)) {
         $attempt++;
         sleep(3); // Delay before retries
 
-        $apiKey = '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'; // Replace with your actual OpenAI API key
+        $apiKey = getenv('API_KEY');
+
         $url = 'https://api.openai.com/v1/chat/completions';
 
         // Adjust the prompt based on the language
