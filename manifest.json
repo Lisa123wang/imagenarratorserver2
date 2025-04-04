@@ -15,7 +15,8 @@
       "downloads"
     ],
     "host_permissions": [
-      "https://api.openai.com/v1/completions"
+      "https://api.openai.com/v1/completions",
+      "https://*.youtube.com/*"
     ],
     "background": {
       "service_worker": "background.js"
