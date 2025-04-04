@@ -107,6 +107,14 @@ if (!empty($imageUrl)) {
     $response = false;
     $err = '';
     $httpInfo = [];
+    $apiKey = getenv('API_KEY');
+    if (!$apiKey) {
+        echo "❌ API_KEY not set or empty\n";
+    } else {
+        echo "✅ API_KEY starts with: " . substr($apiKey, 0, 10) . "\n";
+    }
+    exit;
+
 
     while (!$response && $attempt < $maxAttempts) {
         $attempt++;
