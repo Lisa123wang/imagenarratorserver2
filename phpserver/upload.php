@@ -29,11 +29,6 @@ header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 
 // ✅ Full absolute path to the upload folder (inside phpserver/)
-header('Access-Control-Allow-Origin: *');
-header('Access-Control-Allow-Methods: POST, GET, OPTIONS');
-header('Access-Control-Allow-Headers: Content-Type');
-
-// ✅ uploads folder inside phpserver/
 $targetDir = __DIR__ . "/uploads/";
 $fileName = time() . '_' . basename($_FILES["image"]["name"]);
 $targetFilePath = $targetDir . $fileName;
@@ -56,7 +51,7 @@ if (isset($_FILES["image"]["name"]) && !empty($_FILES["image"]["name"])) {
             // ✅ Optional: Log the upload
             file_put_contents(__DIR__ . "/upload-log.txt", "Uploaded: $fileName\n", FILE_APPEND);
 
-            // ✅ Return correct public URL based on phpserver/ being the web root
+            // ✅ Return the public URL
             echo "https://imagenarratorserver2-1.onrender.com/uploads/" . $fileName;
         } else {
             echo "Sorry, there was an error uploading your file.";
