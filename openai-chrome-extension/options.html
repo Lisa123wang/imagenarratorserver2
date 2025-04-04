@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="options.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body { margin: 25px; font-size: 14px; }
+        code { background: #ddd; padding: 5px 10px; font-size: 16px; border-radius: 3px; }
+        h2 { margin: 25px 0 10px; }
+        h3 { margin: 25px 0 5px; }
+        label { display: block; padding: 10px; }
+        label:hover { background: #f7f7f7; }
+    </style>
+</head>
+<body>
+    <body>
+		<div class="container">
+			<h1>Login Page</h1>
+			<form id="loginForm">
+                <div>
+                    <label for="languageSelect">Choose Language:</label>
+                    <select id="languageSelect">
+                        <option value="en">English</option>
+                        <option value="fr">Français</option>
+                    </select>
+                </div>
+                <label for="email" id="emailLabel">Email:</label>
+                <input type="text" id="email" name="email" required>
+                <label for="password" id="passwordLabel">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+			<div id="message"></div>
+		</div>
+		<!-- Ensure this script is the last element inside the body -->
+		<script src="options.js"></script>
+	</body>
+	
+</body>
+</html>
