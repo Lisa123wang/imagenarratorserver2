@@ -13,7 +13,7 @@
 //     if(in_array($fileType, $allowTypes)){
 //         // Upload file to the server
 //         if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)){
-//             echo "https://imagenarrator.atwebpages.com/uploads/" . $fileName;
+//             echo "https://imagenarratorserver2-1.onrender.com/uploads/" . $fileName;
 //         }else{
 //             echo "Sorry, there was an error uploading your file.";
 //         }
@@ -41,7 +41,7 @@ if(isset($_FILES["image"]["name"]) && !empty($_FILES["image"]["name"])){
         // Upload file to the server
         if(move_uploaded_file($_FILES["image"]["tmp_name"], $targetFilePath)){
             // Return full public URL
-            echo "https://imagenarrator.atwebpages.com/uploads/" . $fileName;
+            echo "https://imagenarratorserver2-1.onrender.com/uploads/" . $fileName;
         } else {
             echo "Sorry, there was an error uploading your file.";
         }

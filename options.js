@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('loginForm').addEventListener('submit', function(event) {
         event.preventDefault();
         const formData = new FormData(this);
-        fetch('https://imagenarrator.atwebpages.com/login.php', {
+        fetch('https://imagenarratorserver2-1.onrender.com/login.php', {
             method: 'POST',
             body: formData
         })
@@ -127,7 +127,7 @@ function formatTime(timeInSeconds) {
 //             return;
 //         }
 
-//         fetch('https://imagenarrator.atwebpages.com/server/getUserID.php', {
+//         fetch('https://imagenarratorserver2-1.onrender.com/server/getUserID.php', {
 //             method: 'POST',
 //             headers: { 'Content-Type': 'application/json' },
 //             body: JSON.stringify({ userEmail })
@@ -195,7 +195,7 @@ function formatTime(timeInSeconds) {
 //                 formData.append('image', blob, 'screenshot.png');
 //                 formData.append('language', language); // Append language to form data
 
-//                 fetch('https://imagenarrator.atwebpages.com/upload.php', {
+//                 fetch('https://imagenarratorserver2-1.onrender.com/upload.php', {
 //                     method: 'POST',
 //                     body: formData
 //                 })
@@ -211,25 +211,25 @@ function formatTime(timeInSeconds) {
 //                 })
 //                 .then(imageUrl => {
 //                     const promises = [
-//                         fetch('https://imagenarrator.atwebpages.com/imageToText.php', {
+//                         fetch('https://imagenarratorserver2-1.onrender.com/imageToText.php', {
 //                             method: 'POST',
 //                             body: JSON.stringify({ imageUrl, language }), // Include language in request
 //                             headers: { 'Content-Type': 'application/json' }
 //                         }).then(response => response.text()),
 
-//                         fetch('https://imagenarrator.atwebpages.com/imageCaption.php', {
+//                         fetch('https://imagenarratorserver2-1.onrender.com/imageCaption.php', {
 //                             method: 'POST',
 //                             body: JSON.stringify({ imageUrl, language }), // Include language in request
 //                             headers: { 'Content-Type': 'application/json' }
 //                         }).then(response => response.text()),
 
-//                         fetch('https://imagenarrator.atwebpages.com/imageExercise.php', {
+//                         fetch('https://imagenarratorserver2-1.onrender.com/imageExercise.php', {
 //                             method: 'POST',
 //                             body: JSON.stringify({ imageUrl, language }), // Include language in request
 //                             headers: { 'Content-Type': 'application/json' }
 //                         }).then(response => response.text()),
 
-//                         fetch('https://imagenarrator.atwebpages.com/imageLabel.php', {
+//                         fetch('https://imagenarratorserver2-1.onrender.com/imageLabel.php', {
 //                             method: 'POST',
 //                             body: JSON.stringify({ imageUrl, language }), // Include language in request
 //                             headers: { 'Content-Type': 'application/json' }
@@ -273,7 +273,7 @@ function formatTime(timeInSeconds) {
 //                         };
 
 //                         // Send aggregated data to another HTTP PHP server
-//                         fetch('https://imagenarrator.atwebpages.com/server/save_imagerecognition.php', {
+//                         fetch('https://imagenarratorserver2-1.onrender.com/server/save_imagerecognition.php', {
 //                             method: 'POST',
 //                             headers: { 'Content-Type': 'application/json' },
 //                             body: JSON.stringify(videodata)
@@ -307,7 +307,7 @@ function formatTime(timeInSeconds) {
 //                         //         return;
 //                         //     }
                         
-//                         //     fetch('https://imagenarrator.atwebpages.com/upload_question.php', {
+//                         //     fetch('https://imagenarratorserver2-1.onrender.com/upload_question.php', {
 //                         //         method: 'POST',
 //                         //         headers: { 'Content-Type': 'application/json' },
 //                         //         body: JSON.stringify({
@@ -429,7 +429,7 @@ function CaptureScreenshot() {
             formData.append('image', blob, 'screenshot.png');
             formData.append('language', language);
 
-            fetch('https://imagenarrator.atwebpages.com/upload.php', {
+            fetch('https://imagenarratorserver2-1.onrender.com/upload.php', {
                 method: 'POST',
                 body: formData
             })
@@ -444,25 +444,25 @@ function CaptureScreenshot() {
             })
             .then(imageUrl => {
                 const promises = [
-                    fetch('https://imagenarrator.atwebpages.com/imageToText.php', {
+                    fetch('https://imagenarratorserver2-1.onrender.com/imageToText.php', {
                         method: 'POST',
                         body: JSON.stringify({ imageUrl, language }),
                         headers: { 'Content-Type': 'application/json' }
                     }).then(res => res.text()),
 
-                    fetch('https://imagenarrator.atwebpages.com/imageCaption.php', {
+                    fetch('https://imagenarratorserver2-1.onrender.com/imageCaption.php', {
                         method: 'POST',
                         body: JSON.stringify({ imageUrl, language }),
                         headers: { 'Content-Type': 'application/json' }
                     }).then(res => res.text()),
 
-                    fetch('https://imagenarrator.atwebpages.com/imageExercise.php', {
+                    fetch('https://imagenarratorserver2-1.onrender.com/imageExercise.php', {
                         method: 'POST',
                         body: JSON.stringify({ imageUrl, language }),
                         headers: { 'Content-Type': 'application/json' }
                     }).then(res => res.text()),
 
-                    fetch('https://imagenarrator.atwebpages.com/imageLabel.php', {
+                    fetch('https://imagenarratorserver2-1.onrender.com/imageLabel.php', {
                         method: 'POST',
                         body: JSON.stringify({ imageUrl, language }),
                         headers: { 'Content-Type': 'application/json' }
@@ -503,7 +503,7 @@ function CaptureScreenshot() {
                         language: language
                     };
 
-                    fetch('https://imagenarrator.atwebpages.com/server/save_imagerecognition.php', {
+                    fetch('https://imagenarratorserver2-1.onrender.com/server/save_imagerecognition.php', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json' },
                         body: JSON.stringify(videodata)
@@ -553,7 +553,7 @@ function addQuestionFunctionality(imageUrl, imgWrapper, language, userID) {
                 return;
             }
 
-            fetch('https://imagenarrator.atwebpages.com/upload_question.php', {
+            fetch('https://imagenarratorserver2-1.onrender.com/upload_question.php', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -633,7 +633,7 @@ document.addEventListener('keydown', function (event) {
 //         const userEmail = storageData.userEmail;
 //         const language = storageData.language || 'en'; // Default to English if no language is set
 
-//         fetch('https://imagenarrator.atwebpages.com/server/getUserID.php', {
+//         fetch('https://imagenarratorserver2-1.onrender.com/server/getUserID.php', {
 //             method: 'POST',
 //             headers: {
 //                 'Content-Type': 'application/json'
@@ -715,7 +715,7 @@ document.addEventListener('keydown', function (event) {
 //                             const videoListData = JSON.stringify(videos);
 //                             formData.append('videoList', videoListData);
 
-//                             fetch('https://imagenarrator.atwebpages.com/server/save_video.php', {
+//                             fetch('https://imagenarratorserver2-1.onrender.com/server/save_video.php', {
 //                                 method: 'POST',
 //                                 body: formData
 //                             })
@@ -821,7 +821,7 @@ function updateScreenshotContainer() {
                         const videoListData = JSON.stringify(videos);
                         formData.append('videoList', videoListData);
 
-                        fetch('https://imagenarrator.atwebpages.com/server/save_video.php', {
+                        fetch('https://imagenarratorserver2-1.onrender.com/server/save_video.php', {
                             method: 'POST',
                             body: formData
                         })
