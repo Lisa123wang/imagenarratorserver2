@@ -1,0 +1,35 @@
+{
+    "optionsTitle": {
+      "message": "Options",
+      "description": "Titre de la page des options"
+    },
+    "apiTitle": {
+      "message": "Entrez votre clé API OpenAI ci-dessous pour commencer.",
+      "description": "Titre de la section de la clé API"
+    },
+    "apiModelTitle": {
+      "message": "Choisissez le modèle d’API :",
+      "description": "Titre de la section du modèle d’API"
+    },
+    "lastMessagesTitle": {
+      "message": "Derniers messages :",
+      "description": "Titre de la section des derniers messages"
+    },
+    "optionsInputPlaceholder": {
+      "message": "Entrez votre clé API ici",
+      "description": "Texte indicatif du champ de saisie de la clé API"
+    },
+    "optionsApiKeyNote": {
+      "message": "Remarque : votre clé API sera uniquement stockée localement sur votre ordinateur et nulle part ailleurs.",
+      "description": "Remarque concernant la clé API"
+    },
+    "optionsSaveButtonText": {
+      "message": "Enregistrer",
+      "description": "Texte du bouton d’enregistrement"
+    },
+    "optionsDeleteButtonText": {
+      "message": "Supprimer la clé API",
+      "description": "Texte du bouton de suppression"
+    }
+  }
+  

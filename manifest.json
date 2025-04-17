@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "ImageNarrator",
-    "version": "3.0.5",
+    "version": "3.0.10",
     "description": "Take screenshots on YouTube and interact with ChatGPT or generate images without leaving your favorite website.",
     "icons": {
       "16": "icon-16.png",
@@ -14,10 +14,7 @@
       "storage",
       "downloads"
     ],
-    "host_permissions": [
-      "https://api.openai.com/v1/completions",
-      "https://*.youtube.com/*"
-    ],
+    
     "background": {
       "service_worker": "background.js"
     },

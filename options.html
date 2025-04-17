@@ -1,43 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="options.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        body { margin: 25px; font-size: 14px; }
-        code { background: #ddd; padding: 5px 10px; font-size: 16px; border-radius: 3px; }
-        h2 { margin: 25px 0 10px; }
-        h3 { margin: 25px 0 5px; }
-        label { display: block; padding: 10px; }
-        label:hover { background: #f7f7f7; }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login/Register</title>
+  <link rel="stylesheet" href="options.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <style>
+    body { margin: 25px; font-size: 14px; font-family: sans-serif; background: #f8f8f8; }
+    .container { max-width: 400px; margin: 0 auto; background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px #ccc; }
+    h1 { text-align: center; }
+    form { display: none; }
+    form.active { display: block; }
+    label, select, input, button { width: 100%; margin-bottom: 10px; }
+    button.switch { background: none; border: none; color: blue; cursor: pointer; text-decoration: underline; font-size: 13px; margin-top: 5px; }
+    #message { color: red; text-align: center; margin-top: 10px; }
+  </style>
 </head>
 <body>
-    <body>
-		<div class="container">
-			<h1>Login Page</h1>
-			<form id="loginForm">
-                <div>
-                    <label for="languageSelect">Choose Language:</label>
-                    <select id="languageSelect">
-                        <option value="en">English</option>
-                        <option value="fr">Français</option>
-                    </select>
-                </div>
-                <label for="email" id="emailLabel">Email:</label>
-                <input type="text" id="email" name="email" required>
-                <label for="password" id="passwordLabel">Password:</label>
-                <input type="password" id="password" name="password" required>
-                <button type="submit">Login</button>
-            </form>
-			<div id="message"></div>
-		</div>
-		<!-- Ensure this script is the last element inside the body -->
-		<script src="options.js"></script>
-	</body>
-	
+  <div class="container">
+    <h1 id="formTitle">Login Page</h1>
+
+    <!-- ✅ Login Form -->
+    <form id="loginForm" class="active">
+      <label for="languageSelect">Choose Language:</label>
+      <select id="languageSelect">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="zh-TW">繁體中文</option>
+      </select>
+
+      <label for="email" id="emailLabel">Email:</label>
+      <input type="text" id="email" name="email" required />
+
+      <label for="password" id="passwordLabel">Password:</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit" id="loginButton">Login</button>
+      <button type="button" class="switch" id="toRegister">Don't have an account? Register</button>
+      <button id="clearExtensionData">🧹 Clear chrome extension data</button>
+
+    </form>
+
+    <!-- ✅ Register Form -->
+    <form id="registerForm">
+      <label for="regLanguageSelect">Choose Language:</label>
+      <select id="regLanguageSelect">
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="zh-TW">繁體中文</option>
+      </select>
+
+      <label for="regEmail" id="regEmailLabel">Email:</label>
+      <input type="text" id="regEmail" name="email" required />
+
+      <label for="regPassword" id="regPasswordLabel">Password:</label>
+      <input type="password" id="regPassword" name="password" required />
+
+      <button type="submit" id="registerButton">Register</button>
+      <button type="button" class="switch" id="toLogin">Already have an account? Login</button>
+    </form>
+
+    <div id="message"></div>
+  </div>
+
+  <script src="options.js"></script>
 </body>
 </html>
